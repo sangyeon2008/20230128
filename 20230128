@@ -1,0 +1,45 @@
+# def solution(ingredient):
+#     answer=[]
+#     tmp=0
+#     for i in ingredient:
+#         answer.append(i)
+#         if len(answer) >= 4 and answer[-4:] ==[1,2,3,1]:
+#             del answer[-4:]
+#             tmp +=1
+#     return tmp
+#
+# print(solution([2, 1, 1, 2, 3, 1, 2, 3, 1]))
+
+
+
+
+# def solution(s):
+#     x = 0
+#     while s:
+#         ax = 0
+#         bx = 0
+#         cnt=0
+#         for i in range(1,len(s)):
+#             x=s[0]
+#             if s[i]==s[0]:
+#                 ax+=1
+#             else:
+#                 bx+=1
+#                 if ax==bx:
+#                     cnt+=1
+#                     s=s[i+1:]
+#                     break
+#         return cnt
+# print(solution("banana"))
+
+
+# board[j][i]
+
+#크레인 인형뽑기 게임 64061
+def solution(board, moves):
+
+    poket=0
+    for i in moves:
+        for j in range(board):
+            if board[j][i] != 0:
+                poket=poket.append(board[j][i])
